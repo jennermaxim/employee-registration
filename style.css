@@ -1,0 +1,416 @@
+/* @import url("https://fonts.googleapis.com/css2?family=poppins:wght@400;500;600&display=swap"); */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "poppins", sans- serif;
+}
+
+body {
+  background: url("blue\ bubbles.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 110vh;
+  background: rgba(39, 39, 39, 0.4);
+}
+.nav {
+  position: fixed;
+  top: 0;
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+  background: linear gradient(rgba(39, 39, 39, 0.6), transparent);
+  z-index: 100;
+}
+.nav-logo p {
+  color: white;
+  font-size: 25px;
+  font-weight: 600;
+}
+.nav-menu ul {
+  display: flex;
+}
+.nav-menu ul li {
+  list-style-type: none;
+}
+.nav-menu ul li .link {
+  text-decoration: none;
+  font-weight: 500;
+  color: #fff;
+  padding: bottom 15px;
+  margin: 0 25px;
+}
+.link:hover,
+.active {
+  border-bottom: 2px solid #fff;
+}
+.nav-button .btn {
+  width: 130px;
+  height: 40px;
+  font-weight: 500;
+  background: rgba(39, 39, 39, 0.4);
+  border: radius 30px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.btn:hover #registerBtn {
+  margin-left: 15px;
+}
+.btn.white-btn {
+  background: rgb(255, 255, 225, 0.7);
+}
+
+.btn.white-btn a {
+  color: #000;
+}
+.btn.btn.white-btn:hover {
+  background: rgb(255, 255, 225, 0.5);
+}
+.nav-menu-btn {
+  display: none;
+}
+
+.btn a {
+  text-decoration: none;
+  color: #fff;
+}
+.form-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 512px;
+  height: 500px;
+  overflow: hidden;
+  z-index: 2;
+  background-color: #00000062;
+  border-radius: 10px;
+}
+
+.login-container {
+  transition: 0.5s ease-in-out;
+  padding: 20px;
+}
+
+.top span {
+  color: #fff;
+  font-size: small;
+  padding: 10px 0;
+  display: flex;
+  justify-content: center;
+}
+.top span a {
+  font-weight: 500;
+  color: #fff;
+  margin-left: 5px;
+}
+header {
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  padding: 10px 0 30px o;
+}
+.two-forms {
+  display: flex;
+  gap: 10px;
+}
+.input-field {
+  font-size: 15px;
+  background: rgb(255, 255, 225, 0.2);
+  color: #fff;
+  height: 25px;
+  width: 100%;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  transition: 2s ease;
+  margin: 10px;
+}
+.input-field:hover,
+.input-field:focus {
+  background: rgb(255, 255, 225, 0.25);
+}
+::webkir-input-placeholder {
+  color: #fff;
+}
+.input-box i {
+  position: relative;
+  top: 35px;
+  left: 17px;
+  color: #fff;
+}
+.submit {
+  font-size: 15px;
+  font-weight: 500;
+  color: black;
+  width: 100%;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  background: rgb(255, 255, 225, 0.7);
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  padding: 5px 0;
+}
+.submit:hover {
+  background: rgb(255, 255, 225, 0.5);
+  box-shadow: 1px 5px 7px 1px rgb(0, 0, 0, 0.2);
+}
+.two-col {
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  font-size: small;
+  margin: top 10px;
+}
+.gtwo-col .one {
+  display: flex;
+  gap: 5px;
+}
+.two label a {
+  text-decoration: none;
+  color: #fff;
+}
+.two label a:hover {
+  text-decoration: underline;
+}
+
+/* DASHBOARD */
+.dashboard {
+  display: flex;
+}
+
+.dashboard .profile {
+  width: 20%;
+  background-color: #fff;
+  height: 100vh;
+  border-right: 1px solid black;
+}
+
+.dashboard .profile .profile-details {
+  padding: 10px;
+}
+
+.dashboard .profile .profile-details .img-details {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.dashboard .profile .profile-details .img-details img {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 1px solid black;
+}
+
+.dashboard .profile .profile-details .logout {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.dashboard .profile .profile-details .logout a {
+  background-color: black;
+  text-decoration: none;
+  color: #fff;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+.dashboard .profile .profile-details .logout a:hover {
+  background-color: rgba(0, 0, 0, 0.658);
+}
+
+.dashboard .employess {
+  width: 80%;
+  background-color: #000000d0;
+}
+
+.dashboard .table {
+  padding: 20px;
+}
+
+.dashboard .table table {
+  border: 1px solid #fff;
+  color: #fff;
+  border-collapse: collapse;
+  margin-top: 20px;
+  white-space: nowrap;
+  overflow: auto;
+  width: 100%;
+  display: block;
+}
+
+.dashboard .employess .table .title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+}
+
+.dashboard .employess .table .title .add-employee a {
+  text-decoration: none;
+  background-color: #fff;
+  color: #000;
+  padding: 10px;
+  border-radius: 10px;
+  white-space: nowrap;
+}
+
+.dashboard .employess .table .title .add-employee a:hover {
+  background-color: #ffffffbd;
+}
+
+.dashboard .table table thead tr th,
+.dashboard .table table tbody tr td {
+  border: 1px solid #fff;
+  padding: 10px;
+}
+
+.dashboard .table table tbody tr td a{
+  color: red;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+}
+
+.dashboard .add {
+  background-color: #0000007a;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  overflow: auto;
+}
+
+.dashboard .add .add-form {
+  position: absolute;
+  left: 30%;
+  width: 500px;
+  background-color: #fff;
+  padding: 40px 60px 40px 40px;
+  top: 40px;
+  border-radius: 10px;
+  margin-bottom: 40px;
+}
+
+.dashboard .add .add-form .close a {
+  color: red;
+  font-size: 30px;
+  right: -20px;
+  position: absolute;
+  top: -20px;
+  text-decoration: none;
+  background-color: #fff;
+  padding: 2px 15px;
+  border-radius: 50%;
+}
+
+.dashboard .add .add-form form .input-box label{
+  margin: 10px 0 0 10px;
+  display: block;
+}
+
+.dashboard .add .add-form form .input-box .input-field {
+  padding: 10px 15px;
+  height: 32px;
+  color: #000;
+  background-color: #00000013;
+}
+
+.dashboard .add .add-form form .input-box input[type="date"] {
+  padding: 0 15px;
+}
+
+.dashboard .add .add-form form .input-box select {
+  font-size: 15px;
+  background: 00000013;
+  color: #000;
+  height: 32px;
+  width: 100%;
+  padding: 0 20px;
+  border: none;
+  border-radius: 30px;
+  outline: none;
+  transition: 2s ease;
+  margin: 10px;
+}
+
+.dashboard .add .add-form form .submit{
+  background-color: rgb(201, 201, 0);
+  font-size: 20px;
+  margin-left: 10px;
+}
+
+.dashboard .add .add-form form .submit:hover{
+  background-color: rgb(255, 255, 0);
+}
+
+@media only screen and (max-width: 786px) {
+  .nav-button {
+    display: none;
+  }
+  .nav-menu.responsive {
+    top: 100px;
+  }
+  .nav-menu {
+    position: absolute;
+    top: -800px;
+    display: flex;
+    justify-content: center;
+    background: rgb(255, 255, 225, 0.2);
+    width: 100%;
+    height: 90vh;
+    backdrop-filter: blur(20px);
+    transition: 0.3s;
+  }
+  .nav-menu ul {
+    flex-direction: column;
+    text-align: center;
+  }
+  .nav-menu-btn {
+    display: block;
+  }
+  .nav-menu-btn i {
+    font-size: 25px;
+    color: #fff;
+    padding: 10px;
+    background: rgb(255, 255, 225, 0.2);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.3s;
+  }
+  .nav-menu-btn i:hover {
+    background: rgb(255, 255, 225, 0.15);
+  }
+}
+@media only screen and (max-width: 540px) {
+  .wrapper {
+    min-height: 100vh;
+  }
+  .form-box {
+    width: 100%;
+    height: 500px;
+  }
+  .register-container,
+  .login-container {
+    width: 100%;
+    padding: 0 20px;
+  }
+  .register-container .two-forms {
+    flex-direction: column;
+    gap: 0;
+  }
+}
