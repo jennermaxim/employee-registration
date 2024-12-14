@@ -13,6 +13,7 @@ include 'connect.php';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/qrcodejs/qrcode.min.js"></script>
 </head>
 
 <body>
@@ -55,6 +56,7 @@ include 'connect.php';
                 <table>
                     <thead>
                         <tr>
+                            <th>Qr Code</th>
                             <th>Full Name</th>
                             <th>Date of Birth</th>
                             <th>NIN</th>
@@ -78,6 +80,10 @@ include 'connect.php';
                             while ($row = mysqli_fetch_array($select)) {
                                 ?>
                                 <tr>
+                                    <td>
+                                        <div class="qrcode"></div>
+                                        <input type="hidden" class="employeeId" value="<?php echo $row['employee_id']; ?>">
+                                    </td>
                                     <td><?php echo $row['full_name']; ?></td>
                                     <td><?php echo $row['dob']; ?></td>
                                     <td><?php echo $row['nin']; ?></td>
@@ -217,5 +223,21 @@ include 'connect.php';
         ?>
     </div>
 </body>
+<script>
+    let employeeElements = document.querySelectorAll(".employeeId");
+
+    employeeElements.forEach(employeeElement => {
+        let employeeId = employeeElement.value.trim();
+        const qrcodeDiv = document.createElement("div");
+        qrcodeDiv.classList.add("qrcode");
+        employeeElement.parentNode.appendChild(qrcodeDiv);
+
+        new QRCode(qrcodeDiv, {
+            text: "http://172.20.10.2/employee-registration.com/employee.php?id=" + employeeId,
+            width: 128,
+            height: 128
+        });
+    });
+</script>
 
 </html>

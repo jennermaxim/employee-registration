@@ -20,7 +20,7 @@ include 'connect.php';
   <div class="wrapper">
     <nav class="nav">
       <div class="nav-logo">
-        <p>LOGO .</p>
+        <p>NWIR .</p>
       </div>
       <div class="nav-menu" id="navMneu">
         <ul>

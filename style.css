@@ -358,6 +358,31 @@ header {
   background-color: rgb(255, 255, 0);
 }
 
+/* Employee Details */
+.main {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main .details{
+  background-color: #ffffff;
+  padding: 20px;
+  margin: 20px;
+  border-radius: 10px;
+}
+
+.main .details p {
+  padding: 5px;
+  border-bottom: 2px solid blue;
+}
+
+.main .details p .title{
+  font-weight: bold;
+  font-size: 16px;
+  padding: 10px;
+}
+
 @media only screen and (max-width: 786px) {
   .nav-button {
     display: none;
